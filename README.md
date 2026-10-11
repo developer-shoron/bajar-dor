@@ -1,81 +1,74 @@
 # 🛒 বাজার দর | BazarDor
 
-**বাজার দর** is a responsive web application that helps users explore essential daily product prices in Bangladesh. Users can browse products, compare market prices, view price changes, explore categories, and access detailed product information after logging in.
+**বাজার দর (BazarDor)** is a responsive web application that helps users explore and compare essential daily product prices in Bangladesh. Browse products, track price changes, explore categories, and view detailed market price information in one place.
 
 ## 🌐 Live Demo
 
-- **Live Link:** `Add your deployed Vercel URL here`
-- **GitHub Repository:** `Add your GitHub repository URL here`
+- **Live Website:** https://bajar-dor-five.vercel.app/
+- **GitHub Repository:** https://github.com/developer-shoron/bajar-dor
 
 ## ✨ Key Features
 
-- **📊 Product Price Tracking:** Browse essential products and view their current prices and percentage changes.
-- **📈 Price Trends:** Explore products whose prices have increased or decreased.
-- **🛍️ Product Catalog:** Browse all available products through a responsive card-based layout.
-- **🏷️ Category Filtering & Sorting:** Filter products by category and sort them by price in ascending or descending order.
-- **🔎 Product Details:** View product descriptions, price summaries, minimum and maximum prices, average prices, and market-wise prices.
-- **🔐 Secure Authentication:** Register and sign in using email and password, Google, or GitHub with Better Auth.
-- **👤 Profile Management:** View your profile and update your personal information.
-- **🔔 Toast Notifications:** Get feedback for authentication, profile updates, and validation errors.
-- **📱 Responsive Design:** Enjoy a user-friendly experience on mobile, tablet, and desktop devices.
-- **⏳ Loading & Error States:** Display loading skeletons and friendly error or not-found pages when needed.
+- 📊 **Product Price Tracking:** Explore daily prices of essential products.
+- 📈 **Price Trends:** Discover products with increasing and decreasing prices.
+- 🛍️ **Product Catalog:** Browse products through a responsive card-based layout.
+- 🏷️ **Category Filtering:** Filter products by category.
+- ↕️ **Price Sorting:** Sort products from low to high or high to low.
+- 🔎 **Product Details:** View product descriptions and market-wise price information.
+- 🔐 **Authentication:** Sign up and sign in using email and password, Google, or GitHub.
+- 👤 **Profile Management:** View and update your profile information.
+- 🔔 **Toast Notifications:** Receive feedback for authentication, validation, and profile updates.
+- 📱 **Responsive Design:** Optimized for mobile, tablet, and desktop devices.
+- ⏳ **Loading & Error States:** User-friendly loading skeletons and error pages.
 
 ## 🛠️ Technologies Used
 
 | Technology | Purpose |
 |---|---|
-| Next.js (App Router) | Application structure, routing, and page rendering |
-| React | Building interactive user interfaces |
-| TypeScript | Type safety and maintainable code |
-| Tailwind CSS | Responsive styling and UI design |
+| Next.js App Router | Application structure and routing |
+| React | Interactive user interfaces |
+| TypeScript | Type safety |
+| Tailwind CSS | Responsive styling |
 | Better Auth | Authentication and session management |
-| MongoDB | Database for users and authentication data |
-| Lucide React | Icons and visual elements |
+| MongoDB | Database for authentication data |
+| Lucide React | Icons |
 | React Toastify | Toast notifications |
-| Programming Hero BazarDor API | Product, category, and price data |
-| Vercel | Application deployment |
+| Programming Hero BazarDor API | Product and category data |
+| Vercel | Deployment and hosting |
 
 ## 📡 API Endpoints
 
-The application uses the BazarDor API to retrieve product and category information.
-
-**Main API URL:**  
-`https://openapi.programming-hero.com/api/bazardor`
+**Main API:**  
+https://openapi.programming-hero.com/api/bazardor
 
 | Endpoint | Description |
 |---|---|
-| `/products` | Retrieve all products |
-| `/products?category=chal` | Retrieve products by category |
-| `/products/1` | Retrieve a single product |
-| `/categories` | Retrieve all categories |
-| `/categories/chal` | Retrieve a single category |
+| `/products` | Get all products |
+| `/products?category=chal` | Filter products by category |
+| `/products/1` | Get a single product |
+| `/categories` | Get all categories |
+| `/categories/chal` | Get a single category |
 
-**Alternative API URLs:**
+**Alternative APIs:**
 
-- `https://api.api-store.workers.dev/api/bazardor`
-- `https://api.abcz.workers.dev/api/bazardor`
+- https://api.api-store.workers.dev/api/bazardor
+- https://api.abcz.workers.dev/api/bazardor
 
 ## 🚀 Getting Started
 
-Follow these steps to run the project locally.
-
 ### Prerequisites
 
-Make sure you have installed:
-
-- Node.js (LTS version recommended)
+- Node.js (LTS recommended)
 - npm
-- A MongoDB database
+- MongoDB database
 - Google and GitHub OAuth credentials for social login
 
 ### 1. Clone the Repository
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
-cd YOUR_PROJECT_FOLDER
+git clone https://github.com/developer-shoron/bajar-dor.git
+cd bajar-dor
 ```
-
-Replace the repository URL and project folder with your actual values.
 
 ### 2. Install Dependencies
 
@@ -85,23 +78,7 @@ npm install
 
 ### 3. Configure Environment Variables
 
-Create a `.env.local` file in the project root:
-
-```env
-BETTER_AUTH_URL=http://localhost:3000
-NEXT_PUBLIC_APP_URL=http://localhost:3000
-
-BETTER_AUTH_SECRET=your_generated_secret
-MONGODB_URI=your_mongodb_connection_string
-
-GOOGLE_CLIENT_ID=your_google_client_id
-GOOGLE_CLIENT_SECRET=your_google_client_secret
-
-GITHUB_CLIENT_ID=your_github_client_id
-GITHUB_CLIENT_SECRET=your_github_client_secret
-```
-
-**Important:** Replace the placeholder values with your own credentials. Never commit `.env.local` or expose database passwords, OAuth secrets, or authentication secrets in your repository.
+Configure the required environment variables locally before running the application. Do not commit credentials or secret values to GitHub.
 
 ### 4. Start the Development Server
 
@@ -109,7 +86,7 @@ GITHUB_CLIENT_SECRET=your_github_client_secret
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open http://localhost:3000 in your browser.
 
 ### 5. Build for Production
 
@@ -120,89 +97,56 @@ npm run start
 
 ## 🔑 Authentication
 
-BazarDor uses Better Auth for authentication.
-
-Supported methods:
+BazarDor uses Better Auth to provide:
 
 - Email and password registration
 - Email and password login
-- Google OAuth
-- GitHub OAuth
-- Session-based authentication
+- Google OAuth authentication
+- GitHub OAuth authentication
+- Session management
 - Protected product detail pages
 - Profile information updates
 
-Social login requires valid OAuth credentials and correctly configured callback URLs.
-
-## 📁 Project Structure
-
-A typical Next.js App Router structure for this project:
-
-```text
-bazar-dor/
-├── public/
-│   └── images/
-├── src/
-│   ├── app/
-│   │   ├── page.tsx
-│   │   ├── signin/
-│   │   ├── signup/
-│   │   ├── profile/
-│   │   ├── product/
-│   │   │   └── [slug]/
-│   │   ├── category/
-│   │   │   └── [slug]/
-│   │   ├── api/
-│   │   │   └── auth/
-│   │   │       └── [...all]/
-│   │   ├── layout.tsx
-│   │   └── not-found.tsx
-│   └── lib/
-│       ├── auth.ts
-│       └── auth-client.ts
-├── .env.local
-├── .gitignore
-├── package.json
-├── README.md
-└── tsconfig.json
-```
-
-*Note: The structure above is illustrative. Adjust it to match the actual folders and files in your repository.*
+Social authentication requires valid provider credentials and correctly configured callback URLs.
 
 ## 📱 Responsive Design
 
-The interface is designed to adapt to different screen sizes:
+BazarDor provides a responsive interface across different devices:
 
-- **Mobile:** Compact navigation, stacked hero section, and single-column product layouts where needed.
-- **Tablet:** Flexible layouts with responsive product grids.
-- **Desktop:** Multi-column product cards and wider content sections.
+- **Mobile:** Compact navigation and responsive product cards.
+- **Tablet:** Flexible layouts and product grids.
+- **Desktop:** Multi-column product layouts and expanded content sections.
 
 ## 🚢 Deployment
 
-This project can be deployed on [Vercel](https://vercel.com/).
+The application is deployed on **Vercel**.
+
+**Live Website:** https://bajar-dor-five.vercel.app/
+
+To deploy your own version:
 
 1. Push the project to GitHub.
 2. Import the repository into Vercel.
-3. Configure all required environment variables in the Vercel project settings.
-4. Set the production application URL in `BETTER_AUTH_URL` and `NEXT_PUBLIC_APP_URL`.
-5. Configure the Google and GitHub OAuth callback URLs for the production domain.
-6. Deploy the application and test the authentication, product pages, and profile update functionality.
-
-Ensure dynamic routes work after refreshing the page and that the production build completes successfully.
+3. Configure the required environment variables in Vercel.
+4. Set the production application URL.
+5. Configure Google and GitHub OAuth callback URLs.
+6. Deploy and test the application.
 
 ## 📌 Important Notes
 
-- Product prices may vary depending on market conditions.
-- Product and category availability depends on the API response.
+- Product prices may change depending on market conditions.
+- Product availability depends on the API response.
 - Product detail pages require authentication.
-- Authentication credentials must be stored securely in environment variables.
-- The application should be tested on mobile, tablet, and desktop before submission.
+- Never commit environment files or expose database and OAuth secrets.
+- Test the application across mobile, tablet, and desktop screen sizes.
 
-## 👨‍💻 Author
+## 👨‍💻 Project Information
 
-**BazarDor — B14-A7**
-
-A project focused on making everyday product prices easier to explore and compare in Bangladesh.
+- **Project Name:** বাজার দর | BazarDor
+- **Assignment:** B14-A7
+- **Category:** Daily Market Price Tracking
+- **Live Website:** https://bajar-dor-five.vercel.app/
+- **Repository:** https://github.com/developer-shoron/bajar-dor
 
 ---
 
